@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de Enlaces - Chacao</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Escudo de Enlaces</h1>
+        <p>Sistema de Detección para Importadoras y Exportadoras - Municipio Chacao</p>
+        <nav>
+            <button data-tab="analizar" class="on">Análisis de Correo</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="msg" role="status"></div>
+
+        <section id="analizar">
+            <form id="analyzeForm">
+                <label>Cuerpo del correo o URL sospechosa (Una por línea)
+                    <textarea name="texto" rows="6" required placeholder="Ejemplo:&#10;http://aduanas-seguras.xyz/login&#10;https://google.com"></textarea>
+                </label>
+                <div class="actions">
+                    <button type="submit" class="primary">Analizar Enlaces</button>
+                </div>
+            </form>
+
+            <div id="results" hidden></div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

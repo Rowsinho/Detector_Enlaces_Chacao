@@ -1,0 +1,37 @@
+:root{--ink:#10272b;--bg:#f2f5f3;--card:#fff;--line:#d3dcd8;--teal:#0a7c72;--ok:#1f7a3d;--warn:#a86400;--crit:#b3261e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",system-ui,sans-serif}
+header{background:var(--ink);color:#fff;padding:1.2rem 1.5rem 0}
+header h1{margin:0;font-size:1.4rem;font-weight:650}
+header p{margin:.1rem 0 .8rem;color:#9fc3bd;font-size:.9rem}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav button{background:none;border:0;color:#cfe3df;padding:.6rem 1rem;cursor:pointer;font:inherit;border-bottom:3px solid transparent}
+nav button.on{color:#fff;border-color:#3fd0c0}
+main{max-width:1100px;margin:0 auto;padding:1.5rem}
+
+form{display:grid;grid-template-columns:1fr;gap:.8rem;background:var(--card);border:1px solid var(--line);padding:1rem;margin-bottom:1rem}
+label{display:flex;flex-direction:column;font-size:.85rem;gap:.25rem;font-weight:600}
+textarea {padding:.5rem;border:1px solid #aebcb7;border-radius:4px;font:inherit;background:#fff;width:100%;resize:vertical;font-family:monospace}
+textarea:focus-visible{outline:3px solid #3fd0c0;outline-offset:2px}
+
+button,.btn{padding:.5rem 1rem;border:1px solid var(--ink);background:#fff;border-radius:4px;cursor:pointer;font:inherit;color:var(--ink);text-decoration:none}
+button.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+button:hover.primary{background:#08665e}
+:focus-visible{outline:3px solid #3fd0c0;outline-offset:2px}
+.actions{grid-column:1/-1;display:flex;gap:.6rem;flex-wrap:wrap}
+
+.tag{padding:.1rem .55rem;border-radius:99px;font-size:.78rem;font-weight:700;color:#fff;background:#7b8b88}
+.tag.OK{background:var(--ok)}.tag.ALERTA{background:var(--warn)}.tag.CRITICO{background:var(--crit)}
+
+.result{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--teal);padding:1rem;margin-bottom:1.5rem}
+.result.OK{border-left-color:var(--ok)}.result.ALERTA{border-left-color:var(--warn)}.result.CRITICO{border-left-color:var(--crit)}
+
+.link-card {background:var(--card);border:1px solid var(--line);border-left:6px solid var(--teal);padding:1rem;margin-bottom:1rem;word-break:break-all;}
+.link-card.CRITICO {border-left-color:var(--crit)}
+.link-card.ALERTA {border-left-color:var(--warn)}
+.link-card.OK {border-left-color:var(--ok)}
+
+#msg{min-height:1.4rem;margin-bottom:.6rem;font-weight:600}
+#msg.err{color:var(--crit)}#msg.good{color:var(--ok)}
+.empty{padding:1.2rem;color:#4b6168;text-align:center}
+[hidden]{display:none!important}
